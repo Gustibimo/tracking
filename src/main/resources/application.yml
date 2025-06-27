@@ -1,0 +1,71 @@
+# application.yml
+spring:
+  application:
+    name: teleport
+
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/tracking
+    username: postgres
+    password: postgres
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tracking
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    locations: classpath:db/migration
+    url: jdbc:postgresql://localhost:5432/tracking
+    user: postgres
+    password: postgres
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      timeout: 2000ms
+
+  webflux:
+    base-path: /api/v1
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+
+logging:
+  level:
+    com.teleport.tracking: DEBUG
+    org.springframework.data.r2dbc: DEBUG
+
+---
+# application-prod.yml
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+  r2dbc:
+    url: r2dbc:postgresql://${DB_HOST:postgres}:${DB_PORT:5432}/${DB_NAME:tracking_db}
+    username: ${DB_USERNAME:tracking_user}
+    password: ${DB_PASSWORD:tracking_pass}
+
+  data:
+    redis:
+      host: ${REDIS_HOST:redis}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+
+logging:
+  level:
+    com.teleport.tracking: INFO
+    org.springframework.data.r2dbc: WARN
