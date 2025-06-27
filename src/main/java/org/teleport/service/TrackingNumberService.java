@@ -1,7 +1,6 @@
 package org.teleport.service;
 
 import org.springframework.data.redis.core.ReactiveRedisTemplate;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.teleport.domain.Tracking;
 import org.teleport.domain.dto.TrackingRequest;
@@ -10,10 +9,8 @@ import org.teleport.repository.TrackingRepository;
 import reactor.core.publisher.Mono;
 import reactor.util.retry.Retry;
 
-import java.security.SecureRandom;
 import java.time.Duration;
 import java.time.OffsetDateTime;
-import java.util.UUID;
 
 @Service
 public class TrackingNumberService {
