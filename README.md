@@ -138,7 +138,7 @@ The application exposes the following monitoring endpoints:
 
 ## Deployment
 
-The application is containerized and can be deployed using Docker:
+The application is containerized and can be deployed using Docker and railway:
 
 ```bash
 docker build -t teleport-service .
