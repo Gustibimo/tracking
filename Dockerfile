@@ -2,8 +2,7 @@
 FROM maven:3.9.6-eclipse-temurin-21 AS build
 WORKDIR /workspace/app
 COPY . .
-RUN --mount=type=cache,id=cache-key-m2-cache,target=/root/.m2 \
-    mvn clean package -DskipTests
+RUN mvn clean package -DskipTests
 
 # Runtime stage
 FROM openjdk:21-jdk-slim
