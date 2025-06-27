@@ -20,7 +20,6 @@ public class TrackingNumberGenerator {
                                          String customerName,
                                          String customerSlug) {
 
-        // Creative algorithm combining multiple parameters
         StringBuilder trackingNumber = new StringBuilder();
 
         // Add origin country prefix (2 chars)
