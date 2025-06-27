@@ -24,10 +24,10 @@ spring:
 
   data:
     redis:
-      host: ballast.proxy.rlwy.net
-      port: 57432
+      host: redis.railway.internal
+      port: 6379
       username: default
-      password: dnucgvNaOiiHBQjwfzqHJeCsfNsIeBIQ
+      password: OGIHLIcNqtLUiYkmjayxYZKYXKAuMfuT
       timeout: 2000ms
 
   webflux:
