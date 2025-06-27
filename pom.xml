@@ -9,12 +9,12 @@
     </parent>
 
     <groupId>org.teleport</groupId>
-    <artifactId>teleport</artifactId>
+    <artifactId>tracking-api</artifactId>
     <version>1.0.0</version>
-    <name>teleport</name>
+    <name>tracking-api</name>
 
     <properties>
-        <java.version>21</java.version>
+        <java.version>17</java.version>
     </properties>
 
     <dependencies>
