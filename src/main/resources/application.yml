@@ -4,12 +4,12 @@ spring:
     name: teleport
 
   r2dbc:
-    url: r2dbc:metro.proxy.rlwy.net:30084/railway
+    url: r2dbc:postgresql://metro.proxy.rlwy.net:30084/railway
     username: postgres
     password: wbLtktALXHIyyyweGMyEDXSJFMNmImEl
 
   datasource:
-    url: metro.proxy.rlwy.net:30084/railway
+    url: jdbc:postgresql://metro.proxy.rlwy.net:30084/railway
     username: postgres
     password: wbLtktALXHIyyyweGMyEDXSJFMNmImEl
     driver-class-name: org.postgresql.Driver
@@ -24,7 +24,7 @@ spring:
 
   data:
     redis:
-      host: dnucgvNaOiiHBQjwfzqHJeCsfNsIeBIQ@redis.railway.internal
+      host: redis://:dnucgvNaOiiHBQjwfzqHJeCsfNsIeBIQ@redis.railway.internal:6379
       port: 6379
       timeout: 2000ms
 
