@@ -77,7 +77,7 @@ curl -X GET "http://localhost:8089/api/v1/next-tracking-number?originCountryId=I
 
 production (railway):
 ```bash
-curl -X GET "http://tracking-production-9118.up.railway.app/api/v1/next-tracking-number?originCountryId=ID&destinationCountryId=SG&weight=1.5&createdAt=2025-06-27T18:00:00%2B07:00&customerId=123e4567-e89b-12d3-a456-426614174000&customerName=Test%20Customer&customerSlug=test-customer"
+curl -X GET "https://tracking-production-9118.up.railway.app/api/v1/next-tracking-number?originCountryId=ID&destinationCountryId=SG&weight=1.5&createdAt=2025-06-27T18:00:00%2B07:00&customerId=123e4567-e89b-12d3-a456-426614174000&customerName=Test%20Customer&customerSlug=test-customer"
 ````
 
 ## Getting Started
